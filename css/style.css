@@ -356,21 +356,6 @@ body {
   position: relative;
 }
 
-.main-block::after {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 64px;
-  background: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 16px;
-  bottom: 16px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
 .main-block__down {
   background-color: #ffffff;
   border: 1px solid #A1A4B1;
@@ -388,7 +373,7 @@ body {
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
   margin-right: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 10%;
   -webkit-transition: background-color 0.3s ease-in;
   -o-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
@@ -534,7 +519,7 @@ body {
 .sale__item {
   min-height: 800px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   border-radius: 24px;
   display: -webkit-box;
@@ -1335,10 +1320,6 @@ body {
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
     padding: 0 10px;
-  }
-
-  .sale__item {
-    background-position: center;
   }
 
   .sale__subtitle {
