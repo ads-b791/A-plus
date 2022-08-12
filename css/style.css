@@ -102,7 +102,7 @@ body {
 }
 
 .wrapper {
-  min-height: 100vh;
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,7 +340,7 @@ body {
   background: url("../img/main-block/bg.jpg"); }
 
 .main-block {
-  min-height: 100vh;
+  min-height: 900px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -373,7 +373,7 @@ body {
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
   margin-right: 12px;
-  margin-bottom: 15%;
+  margin-bottom: 400px;
   -webkit-transition: background-color 0.3s ease-in;
   -o-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
