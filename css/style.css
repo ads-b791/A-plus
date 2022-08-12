@@ -1343,6 +1343,13 @@ body {
     padding: 0 10px;
   }
 
+  .no-webp .sale__item{
+    background: url("../img/sale/sale-small.jpg"); }
+
+  .sale__item {
+    background-size: cover;
+  }
+
   .sale__subtitle {
     color: #818697;
   }
@@ -1837,3 +1844,8 @@ body {
 .webp .main-block{ background: url(../img/main-block/bg.webp); }
 
 .webp .sale__item{ background: url(../img/sale/sale-bg.webp); }
+
+@media (max-width: 47.99875em){
+
+  .webp .sale__item{ background: url(../img/sale/sale-small.webp); }
+}
