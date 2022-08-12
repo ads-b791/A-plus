@@ -373,7 +373,7 @@ body {
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
   margin-right: 12px;
-  margin-bottom: 12%;
+  margin-bottom: 15%;
   -webkit-transition: background-color 0.3s ease-in;
   -o-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
@@ -517,10 +517,9 @@ body {
   background: url("../img/sale/sale-bg.jpg"); }
 
 .sale__item {
-  min-height: 800px;
   background-repeat: no-repeat;
-  background-position: center right;
-  background-size: cover;
+  background-position: center center;
+  background-size: initial;
   border-radius: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -541,7 +540,6 @@ body {
   line-height: 120%;
   color: #ffffff;
   max-width: 880px;
-  margin-bottom: 250px;
 }
 
 .sale__btn {
@@ -586,7 +584,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  bottom: 80px;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -951,6 +948,10 @@ body {
   }
 
   .sale__item {
+    min-height: 50rem;
+  }
+
+  .sale__item {
     padding-top: 5rem;
   }
 
@@ -964,6 +965,14 @@ body {
 
   .sale__title {
     font-size: 3.75rem;
+  }
+
+  .sale__title {
+    margin-bottom: 15.625rem;
+  }
+
+  .sale__slider-dots {
+    bottom: 5rem;
   }
 
   .season {
@@ -1098,6 +1107,10 @@ body {
   }
 
   .sale__item {
+    min-height: 25rem;
+  }
+
+  .sale__item {
     padding-top: 1.25rem;
   }
 
@@ -1111,6 +1124,14 @@ body {
 
   .sale__title {
     font-size: 1.75rem;
+  }
+
+  .sale__title {
+    margin-bottom: 3.75rem;
+  }
+
+  .sale__slider-dots {
+    bottom: 2.5rem;
   }
 
   .season {
@@ -1527,6 +1548,18 @@ body {
     }
 }
 
+@supports (min-height: clamp( 25rem , 19.6127946128rem  +  26.936026936vw , 50rem )) {
+    .sale__item {
+      min-height: clamp( 25rem , 19.6127946128rem  +  26.936026936vw , 50rem );
+    }
+}
+
+@supports not (min-height: clamp( 25rem , 19.6127946128rem  +  26.936026936vw , 50rem )) {
+    .sale__item {
+      min-height: calc(25rem + 25 * (100vw - 20rem) / 92.8125);
+    }
+}
+
 @supports (padding-top: clamp( 1.25rem , 0.4419191919rem  +  4.0404040404vw , 5rem )) {
     .sale__item {
       padding-top: clamp( 1.25rem , 0.4419191919rem  +  4.0404040404vw , 5rem );
@@ -1572,6 +1605,30 @@ body {
 @supports not (font-size: clamp( 1.75rem , 1.319023569rem  +  2.1548821549vw , 3.75rem )) {
     .sale__title {
       font-size: calc(1.75rem + 2 * (100vw - 20rem) / 92.8125);
+    }
+}
+
+@supports (margin-bottom: clamp( 3.75rem , 1.1910774411rem  +  12.7946127946vw , 15.625rem )) {
+    .sale__title {
+      margin-bottom: clamp( 3.75rem , 1.1910774411rem  +  12.7946127946vw , 15.625rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 3.75rem , 1.1910774411rem  +  12.7946127946vw , 15.625rem )) {
+    .sale__title {
+      margin-bottom: calc(3.75rem + 11.875 * (100vw - 20rem) / 92.8125);
+    }
+}
+
+@supports (bottom: clamp( 2.5rem , 1.9612794613rem  +  2.6936026936vw , 5rem )) {
+    .sale__slider-dots {
+      bottom: clamp( 2.5rem , 1.9612794613rem  +  2.6936026936vw , 5rem );
+    }
+}
+
+@supports not (bottom: clamp( 2.5rem , 1.9612794613rem  +  2.6936026936vw , 5rem )) {
+    .sale__slider-dots {
+      bottom: calc(2.5rem + 2.5 * (100vw - 20rem) / 92.8125);
     }
 }
 
