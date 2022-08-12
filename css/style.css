@@ -373,7 +373,7 @@ body {
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
   margin-right: 12px;
-  margin-bottom: 10%;
+  margin-bottom: 12%;
   -webkit-transition: background-color 0.3s ease-in;
   -o-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
@@ -519,7 +519,7 @@ body {
 .sale__item {
   min-height: 800px;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center right;
   background-size: cover;
   border-radius: 24px;
   display: -webkit-box;
