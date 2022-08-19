@@ -13,8 +13,39 @@
             document.documentElement.classList.add(className);
         }));
     }
+    let isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+        }
+    };
     function getHash() {
         if (location.hash) return location.hash.replace("#", "");
+    }
+    function fullVHfix() {
+        const fullScreens = document.querySelectorAll("[data-fullscreen]");
+        if (fullScreens.length && isMobile.any()) {
+            window.addEventListener("resize", fixHeight);
+            function fixHeight() {
+                let vh = .01 * window.innerHeight;
+                document.documentElement.style.setProperty("--vh", `${vh}px`);
+            }
+            fixHeight();
+        }
     }
     let _slideUp = (target, duration = 500, showmore = 0) => {
         if (!target.classList.contains("_slide")) {
@@ -3920,6 +3951,7 @@
     window["FLS"] = true;
     isWebp();
     menuInit();
+    fullVHfix();
     showMore();
     pageNavigation();
     headerScroll();

@@ -102,7 +102,7 @@ body {
 }
 
 .wrapper {
-  min-height: 100%;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,7 +340,7 @@ body {
   background: url("../img/main-block/bg.jpg"); }
 
 .main-block {
-  min-height: 900px;
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -373,7 +373,7 @@ body {
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
   margin-right: 12px;
-  margin-bottom: 400px;
+  margin-bottom: 350px;
   -webkit-transition: background-color 0.3s ease-in;
   -o-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
@@ -760,7 +760,7 @@ body {
 
 .footer__up {
   position: absolute;
-  top: 20px;
+  top: 150px;
   right: 20px;
   background-color: #ffffff;
   border: 1px solid #A1A4B1;
